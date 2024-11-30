@@ -2,3 +2,9 @@ name: takeflight
 version: '0.0.1'
 main: evy.evy.takeflight.Takeflight
 api-version: '1.21'
+commands:
+  flightstick:
+    description: 'gimmie'
+    usage: '/flightstick'
+    permission: takeflight.flightstick
+    permission-message: 'You do not have permission to use this command.'
