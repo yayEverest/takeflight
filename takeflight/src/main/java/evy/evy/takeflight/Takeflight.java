@@ -1,5 +1,6 @@
 package evy.evy.takeflight;
 
+import evy.evy.takeflight.commands.GiveItemCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -7,12 +8,18 @@ public final class Takeflight extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        getLogger().info("the stick has risen");
+        getCommand("flightstick").setExecutor(new GiveItemCommand());
 
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        assert getlogger() != null;
+        getlogger().info();
+    }
+
+    private Process getlogger() {
+        return null;
     }
 }
